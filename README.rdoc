@@ -4,11 +4,9 @@ This gem simply gives you the ability to avoid certain pieces of your view from 
 
 Even if this is not generally recommended, there are situations that you really don't want parts to be indexed. Instead of loading all this stuff from a javascript, BadBot simply gives you an option for doing this instead:
 
-```
   <%= no_bot do %>
     stuff i dont wat to be indexed
   <% end %>
-```
 
 in case of a search bot request, the content of the block won't be rendered.
 
@@ -17,42 +15,35 @@ in case of a search bot request, the content of the block won't be rendered.
 
 Include the gem in your gemfile: `gem 'bad_bot'`. And load it in a controller, for example `ApplicationController`:
 
-```
   class ApplicationController < ActionController::Base
     include BadBot::Detector
   end
-```
 
 == Usage
 
 Once your controller is configured, you can call on you views/controller the `no_bot` and `is_bot?` methods:
 
-```
   Stories
   <% no_bot do %>
     1 of 10 pages
   <% end %>
   ...
-```
 
-```
+
   Stories
   <% unless is_bot? %>
     1 of 10 pages
   <% end %>
-```
 
 == Customization
 
 You can add new user-agents to the robots list by using the `BadBot::Bots.setup` method. 
 
-```
   # some_initializer.rb
   BadBot::Bots.instance.setup do |robots|
     robots << 'otherbot'
     robots << 'otherbot2'
   end
-```
 
 == Caution
 
