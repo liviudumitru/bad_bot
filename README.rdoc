@@ -2,7 +2,7 @@
 
 This gem simply gives you the ability to avoid certain pieces of your view from being indexed by search bots.
 
-Even if this is not generally recommended, there are situations that you really don't want parts to be indexed. Instead of loading all this stuff from a javascript, BadBot simply gives you an option for doing this instead:
+Even if this is generally not recommended, there are situations that you really don't want parts to be indexed. Instead of loading all this stuff from a javascript, BadBot simply gives you an option for doing this instead:
 
   <%= no_bot do %>
     stuff i dont wat to be indexed
@@ -36,6 +36,8 @@ Once your controller is configured, you can call on you views/controller the `no
   <% end %>
 
 == Customization
+
+By default it will only trigger for Google, Yahoo and Bing.
 
 You can add new user-agents to the robots list by using the `BadBot::Bots.setup` method. 
 
