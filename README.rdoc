@@ -51,4 +51,4 @@ You can add new user-agents to the robots list by using the `BadBot::Bots.setup`
 == Caution
 
 How you will use this is entirely up to you. You can get punished by search engines if you make bad use of it.
-My intent on creating this was to remove some useless words that kept showing as the highest keywords in webmasters tool.
+My intent on creating this was to remove some useless words that kept showing as the highest keywords at webmastertools.
