@@ -1,4 +1,5 @@
 = BadBot
+{<img src="https://secure.travis-ci.org/tscolari/bad_bot.png" />}[http://travis-ci.org/tscolari/bad_bot]
 
 This gem simply gives you the ability to avoid certain pieces of your view from being indexed by search bots.
 
